@@ -12,5 +12,6 @@ class TestArray:
         for i in range(len(self.array)-1, -1, -1):
             if self.array[i] != self.array[-1] and self.array[i] > self.secondMax:
                 self.secondMax = self.array[i]
-
+            elif self.secondMax > self.array[i]:
+                break
         return self.max, self.secondMax
